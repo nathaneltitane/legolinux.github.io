@@ -1,0 +1,133 @@
+/* Links */
+/*-----------------------------------------------*/
+#links {
+background:#cccccc;
+}
+#navigation a,
+#links a {
+display:block;
+}
+a {
+color:#666666;
+display:block;
+font-weight:normal;
+border:none;
+outline:none;
+-webkit-transition:all .3s ease;
+-moz-transition:all .3s ease;
+-ms-transition:all .3s ease;
+-o-transition:all .3s ease;
+transition:all .3s ease;
+}
+p a {
+color:#666666;
+font-weight:bold;
+display:inline-block;
+}
+a:active,
+a:focus,
+a:link,
+a:visited {
+text-decoration:none;
+outline:none;
+}
+a:hover {
+color:#cccccc;
+text-decoration:none;
+outline:none;
+}
+a.g-profile {
+color:#cc0000;
+}
+a.g-profile:before {
+content:"+";
+}
+a.g-profile:hover {
+color:#ff0000;
+}
+a.label-menu{
+color:#666666;
+cursor:default;
+}
+a.link-menu {
+color:#ffffff;
+}
+a.load-menu {
+color:#ffffff;
+}
+a.instruction:before {
+content:" | ";
+font-weight:normal;
+}
+a.instruction:after {
+content:"";
+font-weight:normal;
+}
+a.new:after {
+content:" [ New ] ";
+}
+.new:after {
+color:red;
+-webkit-animation:pulsate 2s ease-out infinite;
+-moz-animation:pulsate 2s ease-out infinite;
+-ms-animation:pulsate 2s ease-out infinite;
+-o-animation:pulsate 2s ease-out infinite;
+animation:pulsate 2s ease-out infinite;
+opacity:0.0
+}
+a.soon:after {
+content:" [ Coming Soon ] ";
+}
+.soon:after {
+color:cornflowerblue;
+-webkit-animation:pulsate 2s ease-out infinite;
+-moz-animation:pulsate 2s ease-out infinite;
+-ms-animation:pulsate 2s ease-out infinite;
+-o-animation:pulsate 2s ease-out infinite;
+animation:pulsate 2s ease-out infinite;
+opacity:0.0
+}
+a.update:after {
+content:" [ Updated ] ";
+}
+.update:after {
+color:orange;
+-webkit-animation:pulsate 2s ease-out infinite;
+-moz-animation:pulsate 2s ease-out infinite;
+-ms-animation:pulsate 2s ease-out infinite;
+-o-animation:pulsate 2s ease-out infinite;
+animation:pulsate 2s ease-out infinite;
+opacity:0.0;
+}
+@media screen and (max-width:900px) {
+a.soon:after,
+a.new:after,
+a.update:after {
+content:" [ ! ] ";
+}
+}
+@-webkit-keyframes pulsate {
+0% {-webkit-transform:opacity:0.0;}
+50% {opacity:1.0;}
+100% {-webkit-transform:opacity:0.0;}
+}
+@-moz-keyframes pulsate {
+0% {-webkit-transform:opacity:0.0;}
+50% {opacity:1.0;}
+100% {-webkit-transform:opacity:0.0;}
+}
+@-ms-keyframes pulsate {
+0% {-webkit-transform:opacity:0.0;}
+50% {opacity:1.0;}
+100% {-webkit-transform:opacity:0.0;}
+}
+@-o-keyframes pulsate {
+0% {-webkit-transform:opacity:0.0;}
+50% {opacity:1.0;}
+100% {-webkit-transform:opacity:0.0;}
+}
+@-keyframes pulsate {
+0% {-webkit-transform:opacity:0.0;}
+50% {opacity:1.0;}
+100% {-webkit-transform:opacity:0.0;}
+}

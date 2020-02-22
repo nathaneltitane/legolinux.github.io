@@ -1,0 +1,12 @@
+/* Logo */
+/*-----------------------------------------------*/
+.logo {
+background-image:url(/assets/logo.svg);
+background-repeat: no-repeat;
+background-size:24px;
+display:block;
+height:24px;
+width:24px;
+margin:0 auto;
+padding:o;
+}

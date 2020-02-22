@@ -1,0 +1,309 @@
+/* Widgets */
+/*-----------------------------------------------*/
+ul > li {
+border-radius: 5px 0px 0px 5px;
+}
+/* Adobe widgets */
+/*-----------------------------------------------*/
+ul.adobewidget {
+margin:0;
+padding:0;
+}
+ul.adobewidget li {
+background-image:url('/widgets/adobe-widget.svg');
+background-repeat:no-repeat;
+background-size:auto 96px;
+direction:ltr;
+display:block;
+float:left;
+height:32px;
+overflow:hidden;
+width:32px;
+-webkit-transition:all 0.3s ease;
+-moz-transition:all 0.3s ease;
+-ms-transition:all 0.3s ease;
+-o-transition:all 0.3s ease;
+transition:all 0.3s ease;
+}
+ul.adobewidget li.indesign {
+background-position:0px 0
+}
+ul.adobewidget li.illustrator {
+background-position:-32px 0
+}
+ul.adobewidget li.photoshop {
+background-position:-64px 0
+}
+ul.adobewidget li.aftereffects {
+background-position:-96px 0
+}
+ul.adobewidget li.fireworks {
+background-position:-128px 0
+}
+ul.adobewidget li.dreamweaver {
+background-position:-160px 0
+}
+ul.adobewidget li.bridge {
+background-position:-192px 0
+}
+ul.adobewidget li.soundbooth {
+background-position:-224px 0
+}
+ul.adobewidget li.encore {
+background-position:-256px 0
+}
+ul.adobewidget li.flashpro {
+background-position:-288px 0
+}
+ul.adobewidget li.premierepro {
+background-position:-320px 0
+}
+ul.adobewidget li.lightroom {
+background-position:-352px 0
+}
+ul.adobewidget li.flashbuilder {
+background-position:-384px 0
+}
+ul.adobewidget li.incopy {
+background-position:-416px 0
+}
+ul.adobewidget li.flashcatalyst {
+background-position:-448px 0
+}
+ul.adobewidget li.story {
+background-position:-480px 0
+}
+ul.adobewidget li.flex {
+background-position:-512px 0
+}
+ul.adobewidget li.contribute {
+background-position:-544px 0
+}
+ul.adobewidget li.captivate {
+background-position:-576px 0
+}
+ul.adobewidget li.onlocation {
+background-position:-608px 0
+}
+ul.adobewidget li.devicecentral {
+background-position:-640px 0
+}
+ul.adobewidget li.server {
+background-position:-672px 0
+}
+ul.adobewidget li.flashplayer {
+background-position:-704px 0
+}
+ul.adobewidget li.flower {
+background-position:-736px 0
+}
+ul.adobewidget li.indesign:hover {
+background-position:0px -32px
+}
+ul.adobewidget li.illustrator:hover {
+background-position:-32px -32px
+}
+ul.adobewidget li.photoshop:hover {
+background-position:-64px -32px
+}
+ul.adobewidget li.aftereffects:hover {
+background-position:-96px -32px
+}
+ul.adobewidget li.fireworks:hover {
+background-position:-128px -32px
+}
+ul.adobewidget li.dreamweaver:hover {
+background-position:-160px -32px
+}
+ul.adobewidget li.bridge:hover {
+background-position:-192px -32px
+}
+ul.adobewidget li.soundbooth:hover {
+background-position:-224px -32px
+}
+ul.adobewidget li.encore:hover {
+background-position:-256px -32px
+}
+ul.adobewidget li.flashpro:hover {
+background-position:-288px -32px
+}
+ul.adobewidget li.premierepro:hover {
+background-position:-320px -32px
+}
+ul.adobewidget li.lightroom:hover {
+background-position:-352px -32px
+}
+ul.adobewidget li.flashbuilder:hover {
+background-position:-384px -32px
+}
+ul.adobewidget li.incopy:hover {
+background-position:-416px -32px
+}
+ul.adobewidget li.flashcatalyst:hover {
+background-position:-448px -32px
+}
+ul.adobewidget li.story:hover {
+background-position:-480px -32px
+}
+ul.adobewidget li.flex:hover {
+background-position:-512px -32px
+}
+ul.adobewidget li.contribute:hover {
+background-position:-544px -32px
+}
+ul.adobewidget li.captivate:hover {
+background-position:-576px -32px
+}
+ul.adobewidget li.onlocation:hover {
+background-position:-608px -32px
+}
+ul.adobewidget li.devicecentral:hover {
+background-position:-640px -32px
+}
+ul.adobewidget li.server:hover {
+background-position:-672px -32px
+}
+ul.adobewidget li.flashplayer:hover {
+background-position:-704px -32px
+}
+ul.adobewidget li.flower:hover {
+background-position:-736px -32px
+}
+/* CAD widgets */
+/*-----------------------------------------------*/
+ul.cadwidget {
+margin:0;
+padding:0;
+}
+ul.cadwidget li {
+background-image:url('/widgets/cad-widget.svg');
+background-repeat:no-repeat;
+background-size:auto 96px;
+direction:ltr;
+display:block;
+float:left;
+height:32px;
+overflow:hidden;
+width:32px;
+-webkit-transition:all 0.3s ease;
+-moz-transition:all 0.3s ease;
+-ms-transition:all 0.3s ease;
+-o-transition:all 0.3s ease;
+transition:all 0.3s ease;
+}
+ul.cadwidget li.autocad {
+background-position:0px 0
+}
+ul.cadwidget li.cinema4d {
+background-position:-32px 0
+}
+ul.cadwidget li.rhinoceros {
+background-position:-64px 0
+}
+ul.cadwidget li.solidworks {
+background-position:-96px 0
+}
+ul.cadwidget li.sketchup {
+background-position:-128px 0
+}
+ul.cadwidget li.autocad:hover {
+background-position:0px -32px
+}
+ul.cadwidget li.cinema4d:hover {
+background-position:-32px -32px
+}
+ul.cadwidget li.rhinoceros:hover {
+background-position:-64px -32px
+}
+ul.cadwidget li.solidworks:hover {
+background-position:-96px -32px
+}
+ul.cadwidget li.sketchup:hover {
+background-position:-128px -32px
+}
+/* Code widgets */
+/*-----------------------------------------------*/
+ul.codewidget {
+margin:0;
+padding:0;
+}
+ul.codewidget li {
+background-image:url('/widgets/code-widget.svg');
+background-repeat:no-repeat;
+background-size:auto 96px;
+direction:ltr;
+display:block;
+float:left;
+height:32px;
+overflow:hidden;
+width:32px;
+-webkit-transition:all 0.3s ease;
+-moz-transition:all 0.3s ease;
+-ms-transition:all 0.3s ease;
+-o-transition:all 0.3s ease;
+transition:all 0.3s ease;
+}
+ul.codewidget li.shell {
+background-position:0px 0
+}
+ul.codewidget li.css {
+background-position:-32px 0
+}
+ul.codewidget li.html {
+background-position:-64px 0
+}
+ul.codewidget li.javascript {
+background-position:-96px 0
+}
+ul.codewidget li.shell:hover {
+background-position:0px -32px
+}
+ul.codewidget li.css:hover {
+background-position:-32px -32px
+}
+ul.codewidget li.html:hover {
+background-position:-64px -32px
+}
+ul.codewidget li.javascript:hover {
+background-position:-96px -32px
+}
+/* OS widgets */
+/*-----------------------------------------------*/
+ul.oswidget {
+margin:0;
+padding:0;
+}
+ul.oswidget li {
+background-image:url('/widgets/os-widget.svg');
+background-repeat:no-repeat;
+background-size:auto 96px;
+direction:ltr;
+display:block;
+float:left;
+height:32px;
+overflow:hidden;
+width:32px;
+-webkit-transition:all 0.3s ease;
+-moz-transition:all 0.3s ease;
+-ms-transition:all 0.3s ease;
+-o-transition:all 0.3s ease;
+transition:all 0.3s ease;
+}
+ul.oswidget li.linux {
+background-position:0px 0
+}
+ul.oswidget li.osx {
+background-position:-32px 0
+}
+ul.oswidget li.windows {
+background-position:-64px 0
+}
+ul.oswidget li.linux:hover {
+background-position:0px -32px
+}
+ul.oswidget li.osx:hover {
+background-position:-32px -32px
+}
+ul.oswidget li.windows:hover {
+background-position:-64px -32px
+}

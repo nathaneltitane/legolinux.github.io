@@ -1,0 +1,281 @@
+
+		<section>
+
+			<p>The information below has been validated and tested using Ubuntu 14.04 LTS. Any related information referencing Red Hat distributions such as Fedora have also been validated throughout regular use of the Fedora 20 distribution release.</p>
+
+			<p>Please take care in understanding that most OS development cycles and releases often modify the library or system requirements and thus, will require the user to proceed in new software compilation, installation or external library inclusions. </p>
+			
+			<p>You have been warned: I hereby release myself of any responsibility consequent of the actions taken by any user outside of the specified information and steps listed within this guide.</p>
+
+			<div class="section-title">Step 1 - Download and Install the LDraw parts Library</div>
+
+			<p>Basic setup (applies to any Linux distribution or operating system and is the recommended approach)</p>
+
+			<p>Download the latest 'complete.zip' from the <a href="https://www.ldraw.org/downloads-2/downloads.html" target="_blank">LDraw.org download page</a></p>
+
+			<p>Extract the 'complete.zip' archive to the directory of your choice - your home directory is recommended (~/ldraw/) to avoid any file permission conflict or having to tamper with your system as 'root'.</p>
+
+			<p><b>Tip:</b></p>
+
+			<p>To avoid cluttering your home directory and potentially or mistakenly deleting your LDraw parts database, we suggest making the 'ldraw' directory hidden by appending a period ('.') to the directory name like so:</p>
+
+			<pre>$ mv ldraw .ldraw</pre>
+
+			<p>Feel free to move the LDraw parts directory to a 'safer' location, such as a separate partition or a different part of your system to prevent any such unwanted changes: the library is portable and any editor, viewer, renderer or utility can be directed to its location on your system.</p>
+
+			<div class="section-title">Updating your parts list</div>
+
+			<p>If, for any reason, you have decided to alter the original parts directory (~/ldraw/parts.lst), I have made a Linux native 'mklist.exe' equivalent: 'make-list'.</p>
+
+			<p>The make-list utility operates exactly like its Windows counterpart, and generates a 'parts.lst' file that can be either sorted by part number or part description.</p>
+
+			<p>Download (right click: 'Save link as...') the <a href="https://raw.githubusercontent.com/nathaneltitane/scripts/master/ldraw/make-list" target="_blank">make-list</a> utility</p>
+
+			<p>Save the utility as 'make-list' to your LDraw parts library directory (~/ldraw/).</p>
+
+			<p>Run the utility like so:</p>
+
+			<pre>$ ./make-list</pre>
+
+			<p><b>Note:</b></p>
+
+			<p>Make sure that the file is set as executable before attempting to run it:</p>
+
+			<pre>$ sudo chmod +x make-list</pre>
+
+			<p>If present, the previous version of the 'parts.lst' file will be backed up.</p>
+
+			<p>Installer package approach (applies to any Red Hat or Debian based Linux distribution, provided packages exist and are maintained):</p>
+
+			<p><b>deb:</b></p>
+
+			<p>To be determined - Online queries do suggest that a new package for Debian based systems is being created and submitted for approval via the <a href="https://ftp-master.debian.org/new/ldraw-parts_1302+ds-1.html" target="_blank">Debian package overview server page</a>.</p>
+
+			<p><b>rpm:</b></p>
+
+			<p>Download the latest (2013-02) version of the parts library packaged by Eli Carter from the <a href="https://retracile.net/blog/2014/05/31/17.00" target="_blank">Retractile blog page</a>.</p>
+
+			<p>Install 'ldraw_parts-creativecommons-201302-ec4.noarch.rpm' using your preferred package manager or command package management tool (yum, rpm).</p>
+
+			<p><b>Note:</b></p>
+
+			<p>This method will unpack the parts library under a more conventional system directory (/usr/share/ldraw) that is only modifiable via 'root' access.</p>
+
+			<div class="section-title">Step 2 - Install an editor</div>
+
+			<div class="section-title">MLCAD (Hybrid setup)</div>
+
+			<p>Install <a href="https://www.winehq.org/" target="_blank">Wine</a> via your distribution's package manager or application repository.</p>
+
+			<p><b>deb:</b></p>
+
+			<pre>$ sudo apt-get install wine</pre>
+
+			<p><b>rpm:</b></p>
+
+			<pre>$ sudo yum-install wine</pre>
+
+			<p>Download the <a href="https://mlcad.lm-software.com/MLCad_V3.40.zip" target="_blank">MLCad application archive</a>.</p>
+
+			<p>Extract the 'MLCad_V3.40.zip' archive in the directory of your choice - your home directory is recommended to avoid any file permission conflict or having to tamper with your system as 'root'.</p>
+
+			<p>Run MLCad by selecting 'MLCAD.exe' and follow the usual prompts (LDraw parts library directory location and file type registration setup).</p>
+
+			<p><b>Note:</b></p>
+
+			<p>MLCad runs exceptionally well (Platinum status on the Wine's <a href="https://appdb.winehq.org/objectManager.php?sClassapplication&iId1354" target="_blank">AppDB</a> scale) - similar instructions are provided on the <a href="https://mlcad.lm-software.com/Linux.htm" target="_blank">MLCad website</a>.</p>
+
+			<p>Any encountered problem, whatever it may be, should be troubleshooted or reported to the Wine developers as they are responsible for maintaining Wine's underlying code base that makes running Windows executables on Linux distributions possible.</p>
+
+			<div class="section-title">Linux native editors</div>
+
+			<div class="section-title">LeoCad</div>
+
+			<p>Leonardo Zide's LeoCAD is readily available for install for both Debian and Red Hat based distributions. You can install the editor by looking for and installing the 'leocad' package using your preferred package manager or command package management tool (apt, dpkg / yum, rpm).</p>
+
+			<p>Install LeoCAD:</p>
+
+			<p><b>deb:</b></p>
+
+			<pre>$ sudo apt-get install leocad</pre>
+
+			<p><b>rpm:</b></p>
+
+			<pre>$ sudo yum-install leocad</pre>
+
+			<p>Run LeoCad and point it to the LDraw parts library:</p>
+
+			<p>Go to 'View > Preferences...' and set your library directory by either typing it in the field or browsing to it via '...'.</p>
+
+			<p>Make sure to select the topmost directory (normally 'ldraw') that contains the 'parts' directory.</p>
+
+			<p><b>Note:</b></p>
+
+			<p>LeoCAD can use either a zip file or a regular folder as its parts library directory.</p>
+
+			<p>You can start Leocad with a different library setup using:</p>
+
+			<pre>$ leocad -l <library directory="" path=""></library></pre>
+
+			<p>LeoCAD also supports setting the library path as a system environment variable like so:</p>
+
+			<pre>$ set LEOCAD_LIB<library directory="" path=""></library></pre>
+
+			<div class="section-title">LDCad</div>
+
+			<p>Go to <a href="https://www.melkert.net/LDCad/download" target="_blank">LDCad's download page</a></p>
+
+			<p>Select and download the latest generic archive of the LDCad editor.</p>
+
+			<p>Extract the archive in the directory of your choice - your home directory is recommended to avoid any file permission conflict or having to tamper with your system as 'root'.</p>
+
+			<p>Run LDCad, follow the prompts and point it to the LDraw parts library. Make sure to select the topmost directory (normally 'ldraw') that contains the 'parts' directory.</p>
+
+			<p><b>Note:</b></p>
+
+			<p>LDCad assumes you are running on a GTK based or compatible desktop environment such as gnome. Make sure you have installed the required packages and libraries to avoid any issues.</p>
+
+			<div class="section-title">LDGLite</div>
+
+			<p>LDGlite is only available as a standalone 64bit binary for Linux. Compared to the other editors, it does pale in comparison to the amount of features present on the more modern ones.</p>
+
+			<p>If for curiosity's sake you still want to install it, proceed as follows:</p>
+
+			<p>Download the [https://ldglite.sourceforge.net/ldglite1_2_3beta64bit.gz LDGLite binary archive]</p>
+
+			<p>Extract the archive in the directory of your choice - your home directory is recommended to avoid any file permission conflict or having to tamper with your system as 'root'.</p>
+
+			<p>Run LDGlite, right click on its background to get started.</p>
+
+			<p><b>Note:</b></p>
+
+			<p>Make sure that the binary is set as executable before attempting to run it:</p>
+
+			<pre>$ sudo chmod +x ldglite</pre>
+
+			<p>This specific standalone requires libraries such as the dri accelerated opengl libraries, glut, glu, libpng and zlib to be installed.</p>
+
+			<p>If, for whatever reason LDGlite fails to start by clicking on the binary, you may run it via a terminal and verify its output, like so:</p>
+
+			<pre>./ldglite</pre>
+
+			<div class="section-title">Konstruktor</div>
+
+			<p>Konstruktor, created by Park Joon Kyu, is one of the latest attempts to develop a modern, fully integrated and platform independant LDraw model editor. It features a fully modular panel interface as well as full HD POV-Ray rendering capabilities of the model being edited.</p>
+
+			<p>There is no ETA as to when it will be ready, although development continues, to provide a premium alternative to other editors, if those fail to satisfy.</p>
+
+			<p>You may visit the temporary webpage [https://konstruktor.influx.kr/ here] or skip directly to its <a href="https://github.com/segfault87/Konstruktor" target="_blank">GitHub repository</a> to test it out, file bugs or help with its development in any other way.</p>
+
+			<div class="section-title">Step 3 - Install Renderers and related applications</div>
+
+			<div class="section-title">LDView</div>
+
+			<p>LDView, by Travis Cobbs, is a real-time 3D viewer for displaying LDraw models using hardware-accelerated 3D graphics. It is an essential tool in the creation of a model as it can be used to view and debug, in real-time and with full 3D graphics capacity, the model currently being edited (using the auto-update polling preference).</p>
+
+			<p>It can also generate snapshots of the displayed content or of specific selected views of the given model. LDView is native to the Linux platform and is readily available for install for both Debian and Red Hat based distributions.</p>
+
+			<p>Download the latest installer package from <a href="https://ldview.sourceforge.net/Downloads.html#Linux4200B1" target="_blank">LDView's downloads page</a>.</p>
+
+			<p>Install LDView by using your preferred package manager or command package management tool (apt, dpkg / yum, rpm).</p>
+
+			<p><b>Note:</b></p>
+
+			<p><b>deb:</b></p>
+
+			<p>Your system may complain about either missing packages or unresolved dependencies. You may resolve these by forcing an install fix like so:</p>
+
+			<pre>$ sudo apt-get -f install</pre>
+
+			<p><b>rpm:</b></p>
+
+			<p>LDView's Linux maintainer, Peter Bartfai, has an <a href="https://download.opensuse.org/repositories/home:/pbartfai/" target="_blank">LDView repository</a> set up using the OpenSuse build server system, from which you can get the latest LDView version, provided you add the yum repository information as follows:</p>
+
+			<pre>$ sudo cat > /etc/yum.repos.d/ldview.repo << FILE
+			[ldview]
+			name=LDView Repository
+			baseurl=https://download.opensuse.org/repositories/home:/pbartfai/Fedora_$(rpm -E %fedora)/
+			gpgkey=https://download.opensuse.org/repositories/home:/pbartfai/Fedora_$(rpm -E %fedora)/repodata/repomd.xml.key
+			enabled=1
+			gpgcheck=0
+			FILE
+			</pre>
+
+			<p><b>Tip:</b></p>
+
+			<p>The variable '$(rpm -E %fedora)' refers to rpm's way (on the Fedora distribution) of finding the current version and attributing the proper number to the URL.</p>
+
+			<p><b>Note:</b></p>
+
+			<p>The OpenSuse build server team automatically generates the configurations for upcoming or newer versions of any supported Red Hat distribution, ONLY when those distribution versions are finalized, stable and made available to the public.</p>
+
+			<div class="section-title">LPub</div>
+
+			<p>LPub is Kevin Clague's LDraw building instruction editor. This tool is extremely powerful as it enables the creation of highly detailed, professional looking instructions. It uses external rendering applications to generate the model's step thumbnails to be included in the document. Both LDView and LDGlite are supported as external renderers.</p>
+
+			<p>The port was generated by Eli Carter in 2009 and has recently been updated (2014) to enable the compilation and packaging of the latest revision of the software for Linux based distributions.</p>
+
+			<p>You may install LPub as follows:</p>
+
+			<p><b>deb:</b></p>
+
+			<p>Download the latest installer package from my latest <a href="https://github.com/nathaneltitane/lpub/tree/master/2014-06-03" target="_blank">LPub Github repository</a>.</p>
+
+			<p>Install 'lpub.deb' using your preferred package manager or command package management tool (apt, dpkg).</p>
+
+			<p><b>rpm:</b></p>
+
+			<p>Download the latest installer package from Eli Carter's <a href="https://retracile.net/blog/2014/05/31/17.20" target="_blank">blog page</a>.</p>
+
+			<p>Install 'lpub4-4.0.0.14-20140514.ec3.x86_64.rpm' using your preferred package manager or command package management tool (yum, rpm).</p>
+
+			<p><b>Note:</b></p>
+
+			<p><b>deb:</b></p>
+
+			<p>Your system may complain about either missing packages or unresolved dependencies. You may resolve these by forcing an install fix like so:</p>
+
+			<pre>$ sudo apt-get -f install</pre>
+
+			<div class="section-title">LDraw Linux Command Line Utilities (L2CU)</div>
+
+			<p>L2CU is a set of command line utilities developed By Nathanel Titane to enable bulk LDraw model file parsing, editing, exporting, conversion and upload (to Sketchfab.com) without the direct need to use an LDraw CAD editor (though it needs to be installed to enable certain application features). Amongst certain modification options, the user can have parts, colors and/or part's colors, for any ldr and/or mpd file modified to his/her choice, within a selected directory.</p>
+
+			<p>These tools are especially suited for bulk model file updates, upgrades or modifications: you can attend to deprecated or modified parts in an especially effective manner by:</p>
+
+			<ul>
+			<li>replacing and old part entry by a newer one</li>
+			<li>replacing a specified color by a differnet one</li>
+			<li>replacing a specific part's color with a new color<li>
+			</ul>
+
+			<p><b>Note:</b></p>
+
+			<p>The use of these utilities assumes that the user has previously tested the part/color replacment option manually before parsing all files in bulk.</p>
+
+			<p>This application assumes that the model files to be edited abide by the LDraw ldr/mpd file specification.</p>
+
+			<p>To get the utilities, please visit the dedicated github page to that effect: <a href="https://github.com/nathaneltitane/ldraw" target="_blank">LDraw Utilities Github repository</a></p>
+
+			<div class="section-title">Buf3D/Buf3D+ (Android)</div>
+
+			<p>Buf3D is an application aimed at bringing the most actual developments of OpenGL technology for model viewing purposes to the Android mobile platform. Amongst many of its supported file formats and model viewing features it includes the ability to view LDraw models. It will prompt you to make use (online) or download of the official LDraw parts library.</p>
+
+			<p>The newly released Buf3D+ is a bugfix and ad-free version of the initial Buf3D application. Purchasing this version of the application would be of great help in enticing the developer to optimize the current state of the application, updating the framework to the latest Android standards and possibly adding requested features to make it even more formidable.</p>
+
+			<p><a href="https://play.google.com/store/apps/details?idcom.cimplus.buf3d" target="_blank">Buf3D</a> on the Google Play Store</p>
+			<p><a href="https://play.google.com/store/apps/details?idcom.cimplus.buf3dp" target="_blank">Buf3D+</a> on the Google Play Store</p>
+
+			<p><b>Note:</b></p>
+
+			<p>I have contacted the application developer to help enhance the application and bring it to the latest Android and LDraw compatibility standards. The current version is highly efficient in displaying models, though it can still benefit much improvement in the likes of parts database updating and OpenGL shader display functions. Stay tuned!</p>
+
+			<div class="section-title">Dive in</div>
+
+			<p>Learning how to use your new editor or understanding the LDraw file format may be a challenge, but with a little practice you will get the hang of it. Take a look at the tutorials on the <a href="https://wiki.ldraw.org/index.php?title=Category:Tutorials" target="_blank">Ldraw 'Getting Started - Linux' Wiki</a> or on the <a href="https://www.ldraw.org/article/58.html" target="_blank">LDraw website</a> for further help.</p>
+
+			<div class="section-title">Help</div>
+
+			<p>Forums are also a great way to discuss techniques, issues or features of editors or applications used to create or edit your LDraw model files. If you require any further help with any of this content, please visit the <a href="https://forums.ldraw.org" target="_blank">LDraw.org Forums</a>, sign up, and ask a large group of users for help. ^_^</p>
+
+		</section>

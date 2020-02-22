@@ -1,0 +1,82 @@
+/* drawer */
+/*-----------------------------------------------*/
+.drawer * {
+-webkit-transition:all .3s ease;
+-moz-transition:all .3s ease;
+-ms-transition:all .3s ease;
+-o-transition:all .3s ease;
+transition:all .3s ease;
+}
+.drawer {
+background:#999999;
+width:100%;
+height:420px;
+position:fixed;
+top:-420px;
+left:0;
+text-overflow:ellipsis;
+overflow-y:scroll;
+z-index:0;
+-webkit-transition: top 0.3s ease;
+-moz-transition: top 0.3s ease;
+-ms-transition: top 0.3s ease;
+-o-transition: top 0.3s ease;
+transition: top 0.3s ease;
+}
+#webpage {
+position:absolute;
+top:0;
+left:0;
+-webkit-transition: top 0.3s ease;
+-moz-transition: top 0.3s ease;
+-ms-transition: top 0.3s ease;
+-o-transition: top 0.3s ease;
+transition: top 0.3s ease;
+}
+body.menu-open #background{
+height:calc(100vh - 420px);
+}
+body.menu-open .drawer {
+top:0;
+}
+body.menu-open #webpage {
+top:420px;
+}
+.drawer ul {
+background:#bbbbbb;
+}
+.drawer li {
+cursor:pointer;
+width:100%;
+}
+.drawer a {
+color:#ffffff;
+display:block;
+margin:0;
+padding:10px;
+white-space:nowrap;
+overflow:hidden;
+text-overflow:ellipsis;
+}
+.drawer a:hover {
+background:#666666;
+color:#ffffff;
+font-weight:bold;
+}
+.drawer ul a {
+padding-left:20px;
+}
+.drawer > .label-menu > a,
+.drawer > .label-menu > a:hover {
+background:#bbbbbb !important;
+color:#666666 !important;
+}
+.drawer > li:first-child {
+padding:0px;
+}
+.drawer li a:before {
+content:"";
+margin:0;
+}
+.drawer li a:after {
+}

@@ -1,0 +1,82 @@
+/* Social */
+/*-----------------------------------------------*/
+#social {
+background:#bbbbbb;
+}
+.social-list {
+display:-webkit-box;	/* OLD - iOS 6-, Safari 3.1-6 */
+display:-moz-box;		/* OLD - Firefox 19- BUGGY */
+display:-ms-flexbox;	/* TWEENER - IE 10 */
+display:-webkit-flex;	/* NEW - Chrome */
+display:flex;			/* NEW - Opera 12.1, Firefox 20+ */
+justify-content:center;
+}
+.social-message {
+font-weight:bold;
+line-height:32px;
+white-space:nowrap;
+overflow:hidden;
+text-overflow:ellipsis;
+}
+.social-message:after {
+content:"Like what you see? Share the #lego love! <3"
+}
+.social-button {
+background-size:32px;
+display:block;
+height:32px;
+width:32px;
+background-repeat:no-repeat;
+position:relative;
+margin:0px 5px 0px 5px;
+padding:0;
+}
+.social-button.happy {
+background-image:url(/assets/social/happy.svg);
+}
+.social-button.facebook {
+background-image:url(/assets/social/facebook.svg);
+}
+.social-button.google-plus {
+background-image:url(/assets/social/google-plus.svg);
+}
+.social-button.instagram {
+background-image:url(/assets/social/instagram.svg);
+}
+.social-button.linkedin {
+background-image:url(/assets/social/linkedin.svg);
+}
+.social-button.pinterest {
+background-image:url(/assets/social/pinterest.svg);
+}
+.social-button.sketchfab {
+background-image:url(/assets/social/sketchfab.svg);
+}
+.social-button.github {
+background-image:url(/assets/social/github.svg);
+}
+.social-button.twitter {
+background-image:url(/assets/social/twitter.svg);
+}
+@media screen and (min-width:800px) {
+}
+@media screen and (max-width:800px) {
+}
+@media screen and (max-width:700px) {
+.social-message {
+font-weight:bold;
+line-height:24px;
+}
+.social-button {
+background-size:24px;
+height:24px;
+width:24px;
+}
+}
+@media screen and (max-width:600px) {
+}
+@media screen and (max-width:500px) {
+.social-message:after {
+content:"Like? Share the #lego love! <3"
+}
+}

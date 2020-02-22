@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+
+		<!-- css -->
+
+		<link rel="stylesheet" href="/css/style.css" type="text/css" />
+
+		<!-- libraries -->
+
+		<script src="/javascript/jquery-3.4.1.min.js" type="text/javascript"></script>
+
+		<!-- scripts -->
+
+		<script src="/javascript/load-modules.js" type="text/javascript"></script>
+
+	</head>
+
+	<body>
+
+			<section>
+				<div class="grid grid-gutters grid-full large-grid-fit">
+					<div class="grid-cell">
+						<div class="section-title" id="title">
+
+						</div>
+					</div>
+				</div>
+		</section>
+
+		<section>
+            <div class="section-content" id="post-content">
+
+            </div>
+		</section>
+
+		<script>
+			$(function(){$.get("./ldraw-on-linux.html", function (data) {$("#post-content").append(data);});});
+		</script>
+
+		<section id="anchors">
+			<anchors>
+
+			</anchors>
+		</section>
+
+		<section id="footer">
+			<footer>
+
+			</footer>
+		</section>
+
+	</body>
+</html>

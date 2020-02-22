@@ -1,0 +1,10 @@
+/* Horizontal rule */
+/*-----------------------------------------------*/
+hr {
+border-top:1px solid #bbbbbb;
+border-right:0 !important;
+border-bottom:0 !important;
+border-left:0 !important;
+margin:10px 0px 10px 0px;;
+padding:0;
+}

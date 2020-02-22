@@ -1,0 +1,55 @@
+/* Gauge */
+/*-----------------------------------------------*/
+progress {
+height:32px;
+width:calc(100% - 32px);
+}
+progress[value] {
+background:#ffffff;
+color:#eeeeee;
+display:inline-block;
+margin:0px 0px 10px 0px;
+padding:0;
+-webkit-transition:all 0.3s ease;
+-moz-transition:all 0.3s ease;
+-ms-transition:all 0.3s ease;
+-o-transition:all 0.3s ease;
+transition:all 0.3s ease;
+-webkit-animation:value 5s ease;
+-moz-animation:value 5s ease;
+-ms-animation:value 5s ease;
+-o-animation:value 5s ease;
+animation:value 5s ease;
+}
+progress::-webkit-progress-bar {
+background:#eeeeee;
+border-radius:0px 5px 5px 0px;
+}
+progress::-moz-progress-bar {
+background:#eeeeee;
+border-radius:0px 5px 5px 0px;
+}
+progress::-o-progress-bar {
+background:#eeeeee;
+border-radius:0px 5px 5px 0px;
+}
+progress::-progress-bar {
+background:#eeeeee;
+border-radius:0px 5px 5px 0px;
+}
+progress[value]::-webkit-progress-value {
+background:#666666;
+border-radius:0px 5px 5px 0px;
+}
+progress[value]::-moz-progress-value {
+background:#666666;
+border-radius:0px 5px 5px 0px;
+}
+progress[value]::-o-progress-value {
+background:#666666;
+border-radius:0px 5px 5px 0px;
+}
+progress[value]::-progress-value {
+background:#666666;
+border-radius:0px 5px 5px 0px;
+}

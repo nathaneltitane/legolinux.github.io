@@ -1,0 +1,20 @@
+/* Wireframe */
+/*-----------------------------------------------*/
+.wireframe {
+position:relative;
+display:block;
+}
+.wireframe img:nth-child(2) {
+position:absolute;
+top:0;
+left:0;
+opacity:0;
+-webkit-transition:all 0.5s ease;
+-moz-transition:all 0.5s ease;
+-ms-transition:all 0.5s ease;
+-o-transition:all 0.5s ease;
+transition:all 0.5s ease;
+}
+.wireframe:hover img:nth-child(2) {
+opacity:0.75;
+}

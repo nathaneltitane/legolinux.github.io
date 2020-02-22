@@ -1,0 +1,9 @@
+/* Button */
+/*-----------------------------------------------*/
+.button {
+background-color:#eeeeee;
+border-left:5px solid #999999;
+border-radius:2px;
+margin:10px 0px 0px 0px;
+padding:5px 10px;
+}

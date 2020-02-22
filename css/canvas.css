@@ -1,0 +1,8 @@
+canvas:focus {
+outline:none;
+}
+#model-canvas {
+width:100%;
+height:auto;
+display:block;
+}

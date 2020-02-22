@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+
+		<!-- css -->
+
+		<link rel="stylesheet" href="/css/style.css" type="text/css" />
+
+		<!-- libraries -->
+
+		<script src="/javascript/jquery-3.4.1.min.js" type="text/javascript"></script>
+
+		<!-- scripts -->
+
+		<script src="/javascript/load-modules.js" type="text/javascript"></script>
+
+	</head>
+
+	<body>
+
+		<section>
+
+			<!-- model title -->
+
+			<div class="grid grid-gutters grid-full large-grid-fit">
+				<div class="grid-cell">
+					<div class="section-title" id="title">
+
+					</div>
+				</div>
+			</div>
+
+		</section>
+
+		<!-- model render container -->
+
+		<section>
+
+			<div class="grid grid-gutters grid-full large-grid-fit">
+				<div class="grid-cell">
+					<canvas id="model-canvas">
+
+					</canvas>
+				</div>
+			</div>
+
+		</section>
+
+		<!-- model render -->
+
+		<script type="module">
+
+			import * as THREE from '/build/three.module.js';
+
+			import Stats from '/jsm/libs/stats.module.js';
+
+			import { ColladaLoader } from '/jsm/loaders/ColladaLoader.js';
+			import { OrbitControls } from '/jsm/controls/OrbitControls.js';
+
+			var canvas, renderer, controls, camera, scene;
+
+			function init() {
+
+				canvas = document.querySelector('#model-canvas');
+
+				// renderer
+
+				renderer = new THREE.WebGLRenderer( { canvas, antialias: true, alpha: true } );
+				renderer.setClearColor( 0x000000, 0 );
+				renderer.shadowMap.enabled = true;
+				renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+				renderer.setPixelRatio( window.devicePixelRatio );
+
+				// camera
+
+				const camera = new THREE.PerspectiveCamera(45, 2, 0.1, 5);
+				camera.position.z = 2;
+				// camera.position.set( 45, 0, 45 );
+
+				// scene
+
+				scene = new THREE.Scene();
+
+				// controls
+
+				controls = new OrbitControls( camera, renderer.domElement );
+				controls.screenSpacePanning = true;
+				controls.minDistance = 0.25;
+				controls.maxDistance = 0.65;
+				controls.target.set( 0, 0, 0 );
+				controls.update();
+
+				// lights
+
+				var ambientLight = new THREE.AmbientLight( 0xffffff, 0.75 );
+				scene.add( ambientLight );
+
+				// var hemiLight = new THREE.HemisphereLight( 0xffffff, 0xffffff, 1 );
+				// hemiLight.castShadow = true;
+				// scene.add( hemiLight );
+
+				// var dirLight = new THREE.DirectionalLight( 0xffffff, 1, 100 );
+				// dirLight.position.set( 0, 1, 0 );					//default
+				// dirLight.castShadow = true;
+
+				// dirLight.shadow.mapSize.width = 512;					// default
+				// dirLight.shadow.mapSize.height = 512;				// default
+				// dirLight.shadow.camera.near = 0.5;					// default
+				// dirLight.shadow.camera.far = 500;					// default
+				// scene.add( dirLight );
+
+				var pointLight = new THREE.PointLight( 0xffffff, 0.15 );
+				pointLight.castShadow = true;
+				pointLight.shadow.mapSize.width = 512;				// default
+				pointLight.shadow.mapSize.height = 512;				// default
+				pointLight.shadow.camera.near = 0.5;				// default
+				pointLight.shadow.camera.far = 500;					// default
+
+				scene.add( camera );
+				camera.add( pointLight );
+
+				// loader
+
+				// collada
+
+				var loader = new ColladaLoader();
+				loader.load( '/models/armogyres/ag-02r-maboroshi/exports/ag-02r-maboroshi.dae', function ( collada ) {
+
+					var boundingbox = new THREE.Box3()
+					var model = collada.scene;						// model as group
+
+					model.traverse( function ( node ) {
+
+						if ( node.isSkinnedMesh ) {
+
+							node.frustumCulled = false;
+
+						}
+
+					} );
+
+					model.traverse( function ( child ) {
+
+						// make model group children shadow responsive
+
+						child.castShadow = true;
+						child.receiveShadow = true;
+
+						console.log(child);
+
+					} );
+
+					// load model
+
+					scene.add( model );
+
+					// set bounding box
+
+					boundingbox.setFromObject(model);
+					boundingbox.center(controls.target);
+
+				} );
+
+				// stats
+
+				// var stats = new Stats();
+				// container.appendChild( stats.dom );
+
+				// helpers
+
+				// grid
+
+				// var gridHelper = new THREE.GridHelper( 1, 1 );
+				// scene.add( gridHelper );
+
+				// bounding box
+
+				// var box = new THREE.BoxHelper( object, 0x000000 );
+				// scene.add( box );
+
+				//
+
+				function resize () {
+
+					const canvas = renderer.domElement;
+
+					const width = canvas.clientWidth;			// get parent width
+					// const height = canvas.clientHeight;		// default
+					const height = canvas.clientWidth;			// force 1:1 canvas ratio
+
+					const resizeNeeded = canvas.width !== width || canvas.height !== height;
+
+					if ( resizeNeeded ) {
+						renderer.setSize ( width, height, false );
+					}
+					return resizeNeeded;
+				}
+
+				function render() {
+
+					if ( resize ( renderer ) ) {
+
+						const canvas = renderer.domElement;
+						camera.aspect = canvas.clientWidth / canvas.clientHeight;
+						camera.updateProjectionMatrix();
+
+					}
+
+
+					renderer.render( scene, camera );
+					requestAnimationFrame( render );
+				}
+
+				requestAnimationFrame( render );
+
+			}
+
+			init();
+		</script>
+
+		<section>
+
+		<!-- ldraw model view -->
+
+			<div class='container' id='AG-02R MABOROSHI'>
+
+			<!-- renders -->
+
+			<section>
+				<div class="grid grid-gutters grid-full large-grid-fit">
+					<div class="grid-cell">
+						<div class="section-title" id="title">
+							Renders // Model Views
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<div class='grid grid-gutters grid-full display-grid-fit'>
+
+				<!-- quarter front view -->
+
+				<div class='grid-cell'>
+					<a href='./renders/ag-02r-maboroshi-quarter-front.png' target='_blank'>
+						<img src='./renders/ag-02r-maboroshi-quarter-front.png'/>
+					</a>
+				</div>
+
+				<!-- front view -->
+
+				<div class='grid-cell'>
+					<a href='./renders/ag-02r-maboroshi-front.png' target='_blank'>
+						<img src='./renders/ag-02r-maboroshi-front.png'/>
+					</a>
+				</div>
+
+				<!-- quarter back view -->
+
+				<div class='grid-cell'>
+					<a href='./renders/ag-02r-maboroshi-quarter-back.png' target='_blank'>
+						<img src='./renders/ag-02r-maboroshi-quarter-back.png'/>
+					</a>
+				</div>
+
+				<!-- back view -->
+
+				<div class='grid-cell'>
+					<a href='./renders/ag-02r-maboroshi-back.png' target='_blank'>
+						<img src='./renders/ag-02r-maboroshi-back.png'/>
+					</a>
+				</div>
+
+			</div>
+
+		</section>
+
+		<section id="footer">
+			<footer>
+
+			</footer>
+		</section>
+
+	</body>
+</html>

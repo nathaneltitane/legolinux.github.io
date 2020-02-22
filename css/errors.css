@@ -1,0 +1,70 @@
+/* Errors */
+/*-----------------------------------------------*/
+/* 403 */
+/*-----------------------------------------------*/
+.error-403 {
+background-image: url("/assets/logo.svg");
+background-repeat:no-repeat;
+background-size:128px;
+display:block;
+height:128px;
+width:128px;
+margin:0;
+padding:0;
+}
+.error-403:after {
+content:"403";
+color:#ffffff;
+font-weight:bold;
+font-size:32px;
+display:-webkit-box;	/* OLD - iOS 6-, Safari 3.1-6 */
+display:-moz-box;		/* OLD - Firefox 19- BUGGY */
+display:-ms-flexbox;	/* TWEENER - IE 10 */
+display:-webkit-flex;	/* NEW - Chrome */
+display:flex;			/* NEW - Opera 12.1, Firefox 20+ */
+justify-content:center;
+align-items:center;
+height:100%;
+width:100%;
+resize:both;
+}
+.message-403 {
+text-align:right !important;
+}
+.message-403:before {
+content:"403 // HALT!";
+font-weight:bold;
+font-size:64px;
+}
+/* 404 */
+/*-----------------------------------------------*/
+.error-404 {
+background-image: url("/assets/logo.svg");
+background-repeat:no-repeat;
+background-size:128px;
+display:block;
+height:128px;
+width:128px;
+margin:0;
+padding:0;
+}
+.error-404:after {
+content:"404";
+color:#ffffff;
+font-weight:bold;
+font-size:32px;
+display:flex;
+justify-content:center;
+align-items:center;
+height:100%;
+width:100%;
+resize:both;
+}
+.message-404 {
+text-align:right !important;
+}
+.message-404:before {
+content:"404 // OOPS!";
+font-weight:bold;
+font-size:64px;
+}
