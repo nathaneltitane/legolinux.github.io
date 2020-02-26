@@ -2,5 +2,5 @@
 /*-----------------------------------------------*/
 #footer {
 background:#aaaaaa;
-display:flex;
+display:flow-root;
 }
