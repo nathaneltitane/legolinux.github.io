@@ -1,25 +1,25 @@
 /* Title */
 /*-----------------------------------------------*/
 .title {
-color:#666666;
-font-size:1.5em;
+border-left: 5px solid #ff0000 !important;
+font-weight:bold;
 width:100%;
-margin:0;
-padding:10px 10px 10px 10px;
-position:absolute;
-text-shadow:0px 0px 20px #666666;
-opacity:0;
--webkit-transition:all .3s ease;
--moz-transition:all .3s ease;
--ms-transition:all .3s ease;
--o-transition:all .3s ease;
-transition:all .3s ease;
-animation-name:title-reveal;
-animation-delay:1.5s;
-animation-duration:2s;
-animation-fill-mode:forwards;
+white-space:nowrap;
+overflow:hidden;
+text-overflow:ellipsis;
 }
-@keyframes title-reveal {
-0% {opacity:0;}
-100% {opacity:1.0;}
+@media screen and (max-width:800px) {
+.title {
+margin:10px 0px 10px 0px;
+}
+}
+@media screen and (max-width:700px) {
+.title {
+margin:15px 0px 10px 0px;
+}
+}
+@media screen and (max-width:600px) {
+.title {
+margin:20px 0px 10px 0px;
+}
 }

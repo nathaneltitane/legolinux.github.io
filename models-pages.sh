@@ -79,7 +79,7 @@ cat << MODEL-TYPE >> "models/models-menu.html"
 
 				<div class='grid grid-gutters grid-full large-grid-fit'>
 					<div class='grid-cell'>
-						<div class="section-title" id="title">
+						<div class="button title" id="title">
 								${model_title}
 						</div>
 					</div>
@@ -133,7 +133,7 @@ cat > "models/${path[1]}/${path[2]}/index.html" << INDEX
 
 			<div class="grid grid-gutters grid-full large-grid-fit">
 				<div class="grid-cell">
-					<div class="section-title" id="title">
+					<div class="button title" id="title">
 
 					</div>
 				</div>
@@ -338,7 +338,7 @@ cat > "models/${path[1]}/${path[2]}/index.html" << INDEX
 			<section>
 				<div class="grid grid-gutters grid-full large-grid-fit">
 					<div class="grid-cell">
-						<div class="section-title" id="title">
+						<div class="button title" id="title">
 							Renders // Model Views
 						</div>
 					</div>

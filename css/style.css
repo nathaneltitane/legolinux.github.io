@@ -1,11 +1,12 @@
+@import url("/css/align-text.css");
+@import url("/css/align-object.css");
 @import url("/css/background.css");
 @import url("/css/body.css");
 @import url("/css/button.css");
 @import url("/css/canvas.css");
 @import url("/css/classes.css");
 @import url("/css/cursor.css");
-@import url("/css/drawer.css");
-@import url("/css/errors.css");
+@import url("/css/error.css");
 @import url("/css/fonts.css");
 @import url("/css/footer.css");
 @import url("/css/gauge.css");
@@ -22,6 +23,6 @@
 @import url("/css/pre-xmp.css");
 @import url("/css/scrollbars.css");
 @import url("/css/section.css");
-@import url("/css/section-title.css");
-@import url("/css/text-align.css");
 @import url("/css/title.css");
+@import url("/css/size-text.css");
+@import url("/css/text-align.css");

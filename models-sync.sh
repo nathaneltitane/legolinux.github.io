@@ -32,7 +32,7 @@ fi
 
 rsync -avr \
 	--exclude='*.ldr' \
-		--exclude='*.mpd' \
+	--exclude='*.mpd' \
 		$local_models_directory/* $server_models_directory
 
 # create indexes
