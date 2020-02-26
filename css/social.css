@@ -12,7 +12,6 @@ display:flex;			/* NEW - Opera 12.1, Firefox 20+ */
 justify-content:center;
 }
 .social-message {
-font-weight:bold;
 line-height:32px;
 white-space:nowrap;
 overflow:hidden;
@@ -64,7 +63,6 @@ background-image:url(/assets/social/twitter.svg);
 }
 @media screen and (max-width:700px) {
 .social-message {
-font-weight:bold;
 line-height:24px;
 }
 .social-button {

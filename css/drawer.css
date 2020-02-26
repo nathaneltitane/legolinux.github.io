@@ -61,7 +61,6 @@ text-overflow:ellipsis;
 .drawer a:hover {
 background:#666666;
 color:#ffffff;
-font-weight:bold;
 }
 .drawer ul a {
 padding-left:20px;

@@ -1,0 +1,14 @@
+/* Text weight */
+/*-----------------------------------------------*/
+.text-bold {
+font-weight:bold;
+}
+.text-bolder {
+font-weight:bolder;
+}
+.text-lighter {
+font-weight:lighter;
+}
+.text-normal {
+font-weight:normal;
+}
