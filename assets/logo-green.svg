@@ -15,7 +15,7 @@
    version="1.1"
    id="svg8"
    inkscape:version="0.92.4 (5da689c313, 2019-01-14)"
-   sodipodi:docname="logo.svg">
+   sodipodi:docname="logo-green.svg">
   <defs
      id="defs2" />
   <sodipodi:namedview
@@ -26,7 +26,7 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="2.4082031"
-     inkscape:cx="181.04785"
+     inkscape:cx="106.0957"
      inkscape:cy="256"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
@@ -68,7 +68,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -93,32 +93,32 @@
        inkscape:randomized="0"
        d="m 67.733332,163.64998 56.825698,32.80833 0,65.61667 -56.825702,32.80834 -56.825701,-32.80834 2e-6,-65.61667 z" />
     <path
-       style="fill:#ff0000;fill-opacity:1;stroke-width:0.77419353"
+       style="fill:#71c837;fill-opacity:1;stroke-width:0.77419353"
        d="M 422.27734 160 L 256 256 L 256 448 L 422.27734 352 L 422.27734 160 z "
        id="path3834"
        transform="matrix(0.26458333,0,0,0.26458333,0,161.53331)" />
     <path
-       style="fill:#ff5555;fill-opacity:1;stroke-width:0.77419353"
+       style="fill:#5aa02c;fill-opacity:1;stroke-width:0.77419353"
        d="M 256 256 L 89.722656 160 L 89.722656 352 L 256 448 L 256 256 z "
        id="path3837"
        transform="matrix(0.26458333,0,0,0.26458333,0,161.53331)" />
     <path
-       style="fill:#ffaaaa;fill-opacity:1;stroke-width:0.77419353"
+       style="fill:#aade87;fill-opacity:1;stroke-width:0.77419353"
        d="M 256 64 L 89.722656 160 L 256 256 L 422.27734 160 L 256 64 z "
        id="path3824"
        transform="matrix(0.26458333,0,0,0.26458333,0,161.53331)" />
     <path
-       style="fill:#ff5555;fill-opacity:1;stroke-width:0.99999994"
+       style="fill:#5aa02c;fill-opacity:1;stroke-width:0.99999994"
        d="M 256 124 A 71.999998 35.999999 0 0 0 223.04883 128 L 184 128 L 184 160 A 71.999998 35.999999 0 0 0 256 196 L 256 124 z "
        id="path3876"
        transform="matrix(0.26458333,0,0,0.26458333,0,161.53331)" />
     <path
-       style="fill:#ff0000;fill-opacity:1;stroke-width:0.99999994"
+       style="fill:#71c837;fill-opacity:1;stroke-width:0.99999994"
        d="M 256 124 L 256 196 A 71.999998 35.999999 0 0 0 328 160 L 328 128 L 288.83594 128 A 71.999998 35.999999 0 0 0 256 124 z "
        id="ellipse3866"
        transform="matrix(0.26458333,0,0,0.26458333,0,161.53331)" />
     <ellipse
-       style="fill:#ffd5d5;fill-opacity:1;stroke-width:0.26458332"
+       style="fill:#c6e9af;fill-opacity:1;stroke-width:0.26458332"
        id="ellipse3868"
        cx="67.73333"
        cy="195.39998"

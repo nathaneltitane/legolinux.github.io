@@ -10,6 +10,7 @@ display:block;
 a {
 color:#666666;
 display:block;
+font-weight:normal;
 border:none;
 outline:none;
 -webkit-transition:all .3s ease;
@@ -20,6 +21,7 @@ transition:all .3s ease;
 }
 p a {
 color:#666666;
+font-weight:bold;
 display:inline-block;
 }
 a:active,
@@ -34,6 +36,15 @@ color:#cccccc;
 text-decoration:none;
 outline:none;
 }
+a.g-profile {
+color:#cc0000;
+}
+a.g-profile:before {
+content:"+";
+}
+a.g-profile:hover {
+color:#ff0000;
+}
 a.label-menu{
 color:#666666;
 cursor:default;
@@ -43,6 +54,14 @@ color:#ffffff;
 }
 a.load-menu {
 color:#ffffff;
+}
+a.instruction:before {
+content:" | ";
+font-weight:normal;
+}
+a.instruction:after {
+content:"";
+font-weight:normal;
 }
 a.new:after {
 content:" [ New ] ";
@@ -69,7 +88,7 @@ animation:pulsate 2s ease-out infinite;
 opacity:0.0
 }
 a.update:after {
-content:" [ Update ] ";
+content:" [ Updated ] ";
 }
 .update:after {
 color:orange;
