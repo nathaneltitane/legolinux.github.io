@@ -13,33 +13,3 @@ animation-delay:0.5s;
 animation-duration:2s;
 animation-fill-mode:forwards;
 }
-@keyframes background-reveal {
-0% {opacity:0;}
-100% {opacity:1.0;}
-0% {height:calc(100vh - 0px);}
-100% {height:calc(100vh - 78px);}
-}
-@media screen and (max-width:800px) {
-@keyframes background-reveal {
-0% {opacity:0;}
-100% {opacity:1.0;}
-0% {height:calc(100vh - 0px);}
-100% {height:calc(100vh - 136px);}
-}
-}
-@media screen and (max-width:700px) {
-@keyframes background-reveal {
-0% {opacity:0;}
-100% {opacity:1.0;}
-0% {height:calc(100vh - 0px);}
-100% {height:calc(100vh - 136px);}
-}
-}
-@media screen and (max-width:600px) {
-@keyframes background-reveal {
-0% {opacity:0;}
-100% {opacity:1.0;}
-0% {height:calc(100vh - 0px);}
-100% {height:calc(100vh - 194px);}
-}
-}
