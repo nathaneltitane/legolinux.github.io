@@ -39,6 +39,9 @@ margin:0px 0px 0px 10px;
 .logo {
 background-image:url(/assets/logo.svg);
 }
+.logo-black {
+background-image:url(/assets/logo-black.svg);
+}
 .logo-green {
 background-image:url(/assets/logo-green.svg);
 }
