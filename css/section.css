@@ -3,20 +3,11 @@
 section {
 position:relative;
 }
-section#comments {
-}
-section#header {
-background:transparent;
-}
 section#navigation {
 min-width:350px !important;
 }
 section#loader {
 background:#ffffff;
-}
-section#links {
-}
-section#footer {
 }
 @media screen and (min-width:800px) {
 section {
