@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <COLLADA xmlns="http://www.collada.org/2005/11/COLLADASchema" version="1.4.1">
 <asset>
-	<created>2020-02-27T21:36:04</created>
-	<modified>2020-02-27T21:36:04</modified>
+	<created>2020-03-25T14:50:15</created>
+	<modified>2020-03-25T14:50:15</modified>
 <unit name="LeoCAD" meter="0.0004" />
 	<up_axis>Z_UP</up_axis>
 </asset>
@@ -71527,10 +71527,10 @@
 			</triangles>
 		</mesh>
 	</geometry>
-	<geometry id="60470b_dat">
+	<geometry id="60470_dat">
 		<mesh>
-			<source id="60470b_dat-pos">
-				<float_array id="60470b_dat-pos-array" count="538">
+			<source id="60470_dat-pos">
+				<float_array id="60470_dat-pos-array" count="538">
 					-10 6 0
 					-12.2962 5.5434 0
 					-14.2426 4.2426 0
@@ -72071,15 +72071,15 @@
 					16 6 -8
 				</float_array>
 				<technique_common>
-					<accessor source="#60470b_dat-pos-array" count="538" stride="3">
+					<accessor source="#60470_dat-pos-array" count="538" stride="3">
 						<param name="X" type="float" />
 						<param name="Y" type="float" />
 						<param name="Z" type="float" />
 					</accessor>
 				</technique_common>
 			</source>
-			<source id="60470b_dat-normal">
-				<float_array id="60470b_dat-normal-array" count="538">
+			<source id="60470_dat-normal">
+				<float_array id="60470_dat-normal-array" count="538">
 					0 1 0
 					-0.377953 0.92126 0
 					-0.700787 0.700787 0
@@ -72620,19 +72620,19 @@
 					0 0 -1
 				</float_array>
 				<technique_common>
-					<accessor source="#60470b_dat-normal-array" count="538" stride="3">
+					<accessor source="#60470_dat-normal-array" count="538" stride="3">
 						<param name="X" type="float" />
 						<param name="Y" type="float" />
 						<param name="Z" type="float" />
 					</accessor>
 				</technique_common>
 			</source>
-			<vertices id="60470b_dat-vertices">
-				<input semantic="POSITION" source="#60470b_dat-pos"/>
+			<vertices id="60470_dat-vertices">
+				<input semantic="POSITION" source="#60470_dat-pos"/>
 			</vertices>
 			<triangles count="412" material="Main_Colour">
-			<input semantic="VERTEX" source="#60470b_dat-vertices" offset="0" />
-			<input semantic="NORMAL" source="#60470b_dat-normal" offset="0" />
+			<input semantic="VERTEX" source="#60470_dat-vertices" offset="0" />
+			<input semantic="NORMAL" source="#60470_dat-normal" offset="0" />
 			<p>
 				 222 223 224
 				 225 222 224
@@ -127600,7 +127600,7 @@
 				-8e-06 0.793344 0.608773 110.108
 				0 0 0 1
 			</matrix>
-			<instance_geometry url="#60470b_dat">
+			<instance_geometry url="#60470_dat">
 				<bind_material>
 					<technique_common>
 						<instance_material symbol="Main_Colour" target="#Black-material"/>
@@ -127630,7 +127630,7 @@
 				8e-06 -0.793344 0.608773 121.105
 				0 0 0 1
 			</matrix>
-			<instance_geometry url="#60470b_dat">
+			<instance_geometry url="#60470_dat">
 				<bind_material>
 					<technique_common>
 						<instance_material symbol="Main_Colour" target="#Black-material"/>
@@ -128215,7 +128215,7 @@
 				-0.126073 -0.0337961 0.991444 121.887
 				0 0 0 1
 			</matrix>
-			<instance_geometry url="#60470b_dat">
+			<instance_geometry url="#60470_dat">
 				<bind_material>
 					<technique_common>
 						<instance_material symbol="Main_Colour" target="#Black-material"/>
@@ -128740,7 +128740,7 @@
 				0.126076 -0.0337873 0.991444 121.885
 				0 0 0 1
 			</matrix>
-			<instance_geometry url="#60470b_dat">
+			<instance_geometry url="#60470_dat">
 				<bind_material>
 					<technique_common>
 						<instance_material symbol="Main_Colour" target="#Black-material"/>
@@ -129115,7 +129115,7 @@
 				-1.45246e-05 0.991442 0.130551 92.5719
 				0 0 0 1
 			</matrix>
-			<instance_geometry url="#60470b_dat">
+			<instance_geometry url="#60470_dat">
 				<bind_material>
 					<technique_common>
 						<instance_material symbol="Main_Colour" target="#Light_Bluish_Grey-material"/>
@@ -129145,7 +129145,7 @@
 				-3.24481e-05 0.861619 0.507554 151.261
 				0 0 0 1
 			</matrix>
-			<instance_geometry url="#60470b_dat">
+			<instance_geometry url="#60470_dat">
 				<bind_material>
 					<technique_common>
 						<instance_material symbol="Main_Colour" target="#Light_Bluish_Grey-material"/>
