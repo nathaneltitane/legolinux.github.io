@@ -41,18 +41,18 @@ for extension in ${extensions_list[@]}
 do
 	count=1
 
-	for models_directory in  $(echo $(find models/ -type f -iname outline.$extension))
+	for models_directory in  $(echo $(find models/ -type f -iname flat.$extension))
 	do
 		IFS='/' read -r -a path <<< "$models_directory"
 
-		# /models/model-type/model/renders/outline/outline.$extension
+		# /models/model-type/model/renders/flat/flat.$extension
 
 		# echo "${path[0]}" # /models
 		# echo "${path[1]}" # /model-type
 		# echo "${path[2]}" # /model
 		# echo "${path[3]}" # /renders
 		# echo "${path[4]}" # /outine
-		# echo "${path[5]}" # /outline file
+		# echo "${path[5]}" # /flat file
 
 		model_string="$(echo ${path[2]%} | sed 's/\(.*\)-/\1 /')"
 
@@ -62,8 +62,8 @@ do
 		model_name=${model_name_string^^}
 		model_title=${model_string^^}
 
-		outline_file="${path[5]}"
-		outline_file_name="${path[5]%.*}"
+		flat_file="${path[5]}"
+		flat_file_name="${path[5]%.*}"
 
 		# generate model type directory title header
 
