@@ -7,6 +7,8 @@ scripts_list=(
 	models-pages.sh
 )
 
+# run scripts
+
 for script in ${scripts_list[@]}
 do
 	bash ${script}
