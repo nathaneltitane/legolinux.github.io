@@ -7,9 +7,9 @@ scripts_list=(
 	models-pages.sh
 )
 
-for scripts in ${scripts_list[@]}
+for script in ${scripts_list[@]}
 do
-	bash "$script"
+	bash ${script}
 done
 
 # upload changes
