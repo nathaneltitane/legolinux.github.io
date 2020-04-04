@@ -89,7 +89,7 @@ do
 
     count=0
 
-    for background in $(echo $(find $local_models_directory -type f -iname outline.$extension))
+    for background in $(echo $(find $local_models_directory -type f -iname flat.$extension))
     do
         if [ $count -le 9 ]
         then
