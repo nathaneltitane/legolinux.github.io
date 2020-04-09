@@ -96,7 +96,7 @@ do
         ((count++))
     done
 
-    for file in ..background/background-[0-$count]
+    for file in ..background/background-[0-$count]*
     do
 		echo $file
 		done
