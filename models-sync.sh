@@ -91,9 +91,9 @@ do
 
     for background in $(echo $(find $local_models_directory -type f -iname flat.$extension))
     do
-        if [ $count =< "99" ]
+        if [[ $count =< "99" ]]
         then
-            count_prefix="-00"
+            count_prefix="-0"
         fi
 
         rsync -avr "$background" "../background/background${count_prefix}${count}.png"
