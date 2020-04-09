@@ -93,7 +93,7 @@ do
     do
         if [ $count -le 99 ]
         then
-            count_prefix="-0"
+            count_prefix="-00"
         fi
 
         rsync -avr "$background" "../background/background${count_prefix}${count}.png"
