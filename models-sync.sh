@@ -91,8 +91,11 @@ do
 
     for background in $(echo $(find $local_models_directory -type f -iname flat.$extension))
     do
+		for "$count" in $(seq -f "%05g" $count)
+		do
 
-        rsync -avr "$background" "../background/background-$(printf %05d${count}).png"
+        rsync -avr "$background" "../background/background-${count}.png"
+        done
 
         ((count++))
 
@@ -100,6 +103,8 @@ do
         echo
         echo "COUNT: $count"
     done
+
+
 
     # update random background generator with new file count
 
