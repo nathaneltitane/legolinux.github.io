@@ -95,7 +95,7 @@ do
         then
             count_prefix="00"
 
-		elif [ 10 -ge $count -le 99 ]
+		elif [ $count -ge 10 ] && [ $count -le 99 ]
 		then
 			count_prefix="0"
         fi
