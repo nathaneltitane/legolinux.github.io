@@ -94,8 +94,9 @@ do
         if [ $count -ge 0 ] && [ $count -le 9 ]
         then
             count_prefix="00"
+		fi
 
-		elif [ $count -ge 10 ] && [ $count -le 99 ]
+		if [ $count -ge 10 ] && [ $count -le 99 ]
 		then
 			count_prefix="0"
         fi
