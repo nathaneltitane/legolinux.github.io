@@ -105,11 +105,11 @@ do
 
     # update random background generator with new file count
 
-    echo "
+    cat <<- FILE > ./javascript/set-random-background.js
 		// set random background //
 
 		$(document).ready(function() {
-			var count = 150;
+			var count = $count;
 
 			function pad(str, max) {
 				str = str.toString();
@@ -121,6 +121,6 @@ do
 				'url("/background/background-' + pad(Math.floor(Math.random() * count), 3) + .png ")'
 			);
 		});
-    " > ./javascript/set-random-background.js
+    FILE
 
 done
