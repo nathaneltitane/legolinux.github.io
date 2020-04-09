@@ -96,8 +96,6 @@ do
         ((count++))
     done
 
-
-
     # update random background generator with new file count
 
 	cat <<- FILE > ../javascript/set-random-background.js
