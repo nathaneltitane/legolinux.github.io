@@ -91,15 +91,8 @@ do
 
     for background in $(echo $(find $local_models_directory -type f -iname flat.$extension))
     do
-        if (( "$count" >= 0 && "$count" <= 9 ))
-        then
-            count_prefix="00"
-		elif (( "$count" >= 10 && "$count" <= 99 ))
-		then
-			count_prefix="0"
-        fi
 
-        rsync -avr "$background" "../background/background-${count_prefix}${count}.png"
+        rsync -avr "$background" "../background/background-${count}.png"
 
         ((count++))
 
