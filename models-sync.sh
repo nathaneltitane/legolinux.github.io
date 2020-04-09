@@ -99,6 +99,10 @@ do
         rsync -avr "$background" "../background/background${count_prefix}${count}.png"
 
         ((count++))
+
+
+        echo
+        echo $count
     done
 
     # update random background generator with new file count
