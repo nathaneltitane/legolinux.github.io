@@ -98,7 +98,7 @@ do
 
     for file in ..background/*
     do
-		mv $file ${file%%.png}
+		mv $file ${file%.png}
 		done
 
     # update random background generator with new file count
