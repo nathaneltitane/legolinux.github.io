@@ -98,15 +98,15 @@ do
 
     # pad filenames evenly
 
-	a=1
+	count=1
 
 	for background in ../background/*.png
 	do
-		pad_count=$(printf "%03d.png" "$a")
+		pad_count=$(printf "%03d.png" "$count")
 
 		mv -i -- "$background" ../background/background-"$pad_count"
 
-		let a=a+1
+		let count=count+1
 	done
 
     # update random background generator with new file count
