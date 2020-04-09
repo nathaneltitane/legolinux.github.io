@@ -98,11 +98,12 @@ do
 
 	a=1
 
-	for i in ../background/*.png
+	for background in ../background/*.png
 	do
-		new=$(printf "%03d.png" "$a") #04 pad to length of 4
+		new=$(printf "%03d.png" "$a")
 
-		mv -i -- "$i" ../background/"$new"
+		mv -background -- "$background" ../background/background-"$new"
+
 		let a=a+1
 	done
 
