@@ -102,7 +102,7 @@ do
 	do
 		new=$(printf "%03d.png" "$a")
 
-		mv -background -- "$background" ../background/background-"$new"
+		mv -i -- "$background" ../background/background-"$new"
 
 		let a=a+1
 	done
