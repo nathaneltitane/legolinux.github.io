@@ -96,7 +96,7 @@ do
         ((count++))
     done
 
-    for file in ..background/background-*.png
+    for file in ..background/*
     do
 		mv $file ${file%%.png}
 		done
