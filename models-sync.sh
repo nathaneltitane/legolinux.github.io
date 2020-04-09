@@ -91,11 +91,8 @@ do
 
     for background in $(echo $(find $local_models_directory -type f -iname flat.$extension))
     do
-		for "$ncount" in $(seq -f "%05g" $count)
-		do
 
-        rsync -avr "$background" "../background/background-${ncount}.png"
-        done
+        rsync -avr "$background" "../background/background-$(seq -f "%05g" ${count}).png"
 
         ((count++))
 
