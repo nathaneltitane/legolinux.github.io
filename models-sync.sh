@@ -112,13 +112,13 @@ do
 		var count = $count;
 
 		function pad(str, max) {
-		str = str.toString();
-		return str.length < max ? pad("0" + str, max) : str;
+			str = str.toString();
+			return str.length < max ? pad("0" + str, max) : str;
 		}
 
 		$('.background').css(
-		'background-image',
-		'url("/background/background-' + pad(Math.floor(Math.random() * count), 3) + .png ")'
+			'background-image',
+			'url("/background/background-' + pad(Math.floor(Math.random() * count), 3) + .png ")'
 		);
 		});
 	FILE
