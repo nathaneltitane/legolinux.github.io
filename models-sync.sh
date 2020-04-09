@@ -91,12 +91,12 @@ do
 
     for background in $(echo $(find $local_models_directory -type f -iname flat.$extension))
     do
-        if (( $count >= 0 && $count <= 9 ))
+        if (( "$count" >= 0 && "$count" <= 9 ))
         then
             count_prefix="00"
 		fi
 
-		if (( $count >= 10 && $count <= 99 ))
+		if (( "$count" >= 10 && "$count" <= 99 ))
 		then
 			count_prefix="0"
         fi
@@ -107,7 +107,7 @@ do
 
 
         echo
-        echo $count
+        echo "COUNT: $count"
     done
 
     # update random background generator with new file count
