@@ -96,7 +96,10 @@ do
         ((count++))
     done
 
-for n in $(seq $count); do mv "../background/background-*.png" "../background/background-$n.png"; done
+    for file in ..background/background-*.png
+    do
+		mv $file ${file%.png}-new.png
+		done
 
     # update random background generator with new file count
 
