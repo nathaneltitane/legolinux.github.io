@@ -96,13 +96,15 @@ do
         ((count++))
     done
 
+    # pad filenames evenly
+
 	a=1
 
 	for background in ../background/*.png
 	do
-		new=$(printf "%03d.png" "$a")
+		pad_count=$(printf "%03d.png" "$a")
 
-		mv -i -- "$background" ../background/background-"$new"
+		mv -i -- "$background" ../background/background-"$pad_count"
 
 		let a=a+1
 	done
