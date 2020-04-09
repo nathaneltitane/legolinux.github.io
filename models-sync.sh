@@ -105,22 +105,22 @@ do
 
     # update random background generator with new file count
 
-cat <<- FILE >> ../javascript/set-random-background.js
-	// set random background //
+	cat <<- FILE >> ../javascript/set-random-background.js
+		// set random background //
 
-	$(document).ready(function() {
-	var count = $count;
+		$(document).ready(function() {
+		var count = $count;
 
-	function pad(str, max) {
-	str = str.toString();
-	return str.length < max ? pad("0" + str, max) : str;
-	}
+		function pad(str, max) {
+		str = str.toString();
+		return str.length < max ? pad("0" + str, max) : str;
+		}
 
-	$('.background').css(
-	'background-image',
-	'url("/background/background-' + pad(Math.floor(Math.random() * count), 3) + .png ")'
-	);
-	});
-FILE
+		$('.background').css(
+		'background-image',
+		'url("/background/background-' + pad(Math.floor(Math.random() * count), 3) + .png ")'
+		);
+		});
+	FILE
 
 done
