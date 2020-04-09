@@ -93,10 +93,10 @@ do
     do
         if [ $count <= 99 ]
         then
-            count_prefix="-0"
+            count_prefix="0"
         fi
 
-        rsync -avr "$background" "../background/background${count_prefix}${count}.png"
+        rsync -avr "$background" "../background/background-${count_prefix}${count}.png"
 
         ((count++))
 
