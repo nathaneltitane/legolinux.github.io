@@ -94,9 +94,7 @@ do
         if (( "$count" >= 0 && "$count" <= 9 ))
         then
             count_prefix="00"
-		fi
-
-		if (( "$count" >= 10 && "$count" <= 99 ))
+		elif (( "$count" >= 10 && "$count" <= 99 ))
 		then
 			count_prefix="0"
         fi
