@@ -85,7 +85,7 @@ extensions_list=(
 
 for extension in ${extensions_list[@]}
 do
-    # copy outline renders into background directory
+    # copy flat renders into background directory
 
     count=0
 
@@ -102,4 +102,7 @@ do
 
         ((count++))
     done
+
+    echo $count
+
 done
