@@ -108,7 +108,7 @@ do
 	cat <<- FILE > ../javascript/set-random-background.js
 		// set random background //
 
-		$(document).ready(function() {
+		\$(document).ready(function() {
 		var count = $count;
 
 		function pad(str, max) {
@@ -116,7 +116,7 @@ do
 			return str.length < max ? pad("0" + str, max) : str;
 		}
 
-		$('.background').css(
+		\$('.background').css(
 			'background-image',
 			'url("/background/background-' + pad(Math.floor(Math.random() * count), 3) + .png ")'
 		);
