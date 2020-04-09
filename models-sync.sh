@@ -91,10 +91,8 @@ do
 
     for background in $(echo $(find $local_models_directory -type f -iname flat.$extension))
     do
-        if [ $count -le 9 ]
+        if [ $count -le 99 ]
         then
-            count_prefix="-00"
-        else
             count_prefix="-0"
         fi
 
