@@ -96,12 +96,15 @@ do
         ((count++))
     done
 
-    a=1
-for i in ../background/*.png; do
-  new=$(printf "%04d.png" "$a") #04 pad to length of 4
-  mv -i -- "$i" ../background/"$new"
-  let a=a+1
-done
+	a=1
+
+	for i in ../background/*.png
+	do
+		new=$(printf "%03d.png" "$a") #04 pad to length of 4
+
+		mv -i -- "$i" ../background/"$new"
+		let a=a+1
+	done
 
     # update random background generator with new file count
 
