@@ -118,7 +118,7 @@ do
 
 		\$('.background').css(
 			'background-image',
-			'url("/background/background-' + pad(Math.floor(Math.random() * count), 3) + .png ")'
+			'url("/background/background-' + pad(Math.floor(Math.random() * count), 3) + '.png ")'
 		);
 		});
 	FILE
