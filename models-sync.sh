@@ -96,10 +96,7 @@ do
         ((count++))
     done
 
-    for f in ../background/background-[0-$count]*
-    do
-		mv $f `printf "../background/background-%05d ${f#"../background/background-}`
-	done
+for n in $(seq $count); do mv "../background/background-*.png" "../background/background-$n.png"; done
 
     # update random background generator with new file count
 
