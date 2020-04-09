@@ -96,10 +96,12 @@ do
         ((count++))
     done
 
-    for file in ..background/*
+    for file in ..background/background-[0-$count]
     do
-		mv $file ${file%.png}
+		echo $file
 		done
+
+		sleep 10
 
     # update random background generator with new file count
 
