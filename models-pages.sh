@@ -41,7 +41,7 @@ for extension in ${extensions_list[@]}
 do
 	count=1
 
-	for models_directory in  $(echo $(find models/ -type f -iname flat.$extension))
+	for models_directory in  $(echo $(find models/ -type f -iname flat.$extension) | shuf)
 	do
 		IFS='/' read -r -a path <<< "$models_directory"
 
