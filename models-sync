@@ -50,7 +50,7 @@ do
 	title="$(basename $directory)"
 	title="${title^^}"
 
-	echo "${title/-/ }" > title
+	echo "${title/ /-/ }" > title
 
 	for subdirectory in $(find $server_models_directory/* -maxdepth 1 -type d)
 	do
@@ -63,7 +63,7 @@ do
 		title="$(basename $subdirectory)"
 		title="${title^^}"
 
-		echo "${title/-/ }" > title
+		echo "${title/ /-/ }" > title
 	done
 
 	# exit to top level
