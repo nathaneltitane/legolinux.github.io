@@ -30,7 +30,7 @@ fi
 
 # synchronize content
 
-rsync -ar \
+rsync -aqr \
 	--exclude='*.ldr' \
 	--exclude='*.mpd' \
 		$local_models_directory/* $server_models_directory
