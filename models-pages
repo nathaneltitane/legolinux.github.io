@@ -17,11 +17,9 @@ fi
 
 # generate models menu
 
-# OPEN MODELS MENU HTML
+# BEGIN MODELS MENU----------------------------------------------------------- #
 
-# ---------------------------------------------------------------------------- #
-
-# generate models menu header
+# generate header
 
 cat << 'FILE' > "models/models-menu.html"
 
@@ -40,6 +38,8 @@ FILE
 for extension in ${extensions_list[@]}
 do
 	count=1
+
+	# shuffle directory list to showcase all models
 
 	for models_directory in $(find models/ -type f -iname flat.$extension | shuf)
 	do
@@ -87,7 +87,7 @@ cat << MODEL-TYPE >> "models/models-menu.html"
 
 MODEL-TYPE
 
-# generate model menu entry
+# generate model entry
 
 cat << MODEL >> "models/models-menu.html"
 				<div class='grid-cell'>
@@ -99,9 +99,7 @@ cat << MODEL >> "models/models-menu.html"
 
 MODEL
 
-# OPEN MODEL HTML
-
-# ---------------------------------------------------------------------------- #
+# BEGIN MODEL INDEX ---------------------------------------------------------- #
 
 # generate model index
 
@@ -393,16 +391,14 @@ cat > "models/${path[1]}/${path[2]}/index.html" << INDEX
 </html>
 INDEX
 
-# ---------------------------------------------------------------------------- #
-
-# CLOSE MODEL HTML
+# END MODEL INDEX ------------------------------------------------------------ #
 
 		((count++))
 
 	done
 done
 
-# generate models menu footer
+# generate footer
 
 cat << FILE >> "models/models-menu.html"
         </section>
@@ -415,6 +411,4 @@ cat << FILE >> "models/models-menu.html"
 
 FILE
 
-# ---------------------------------------------------------------------------- #
-
-# CLOSE MODELS MENU HTML
+# END MODEL MENU ------------------------------------------------------------- #

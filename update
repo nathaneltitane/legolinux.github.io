@@ -2,9 +2,11 @@
 
 # update #
 
+# variables #
+
 scripts_list=(
-	models-sync.sh
-	models-pages.sh
+	models-sync
+	models-pages
 )
 
 # run scripts

@@ -15,7 +15,7 @@ server_models_directory="$PWD/models"
 source_uid_file="$cloud/Lego/sketchfab/uid-list"
 destination_uid_file="$root/uid-list"
 
-# models #
+# models --------------------------------------------------------------------- #
 
 # check if directory exists
 
@@ -28,14 +28,14 @@ else
 	mkdir -p "$server_models_directory"
 fi
 
-# synchronize #
+# synchronize content
 
-rsync -avr \
+rsync -ar \
 	--exclude='*.ldr' \
 	--exclude='*.mpd' \
 		$local_models_directory/* $server_models_directory
 
-# create indexes
+# indexes -------------------------------------------------------------------- #
 
 cd "$server_models_directory" || exit
 
@@ -66,7 +66,7 @@ do
 	cd "$server_models_directory" || exit
 done
 
-# background #
+# background ----------------------------------------------------------------- #
 
 # check if directory exists
 
