@@ -3,4 +3,10 @@
 #footer {
 background:#aaaaaa;
 display:flow-root;
+position:absolute;
+bottom:0;
+width:100%;
 }
+
+
+
