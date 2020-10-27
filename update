@@ -13,7 +13,7 @@ scripts_list=(
 
 for script in ${scripts_list[@]}
 do
-	bash ${script}
+	bash ./${script}
 done
 
 # upload changes
