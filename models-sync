@@ -7,67 +7,68 @@ shopt -s extglob
 # variables #
 
 cloud="/media/Internal/MEGA"
-root="$PWD/models"
+root="${PWD}"/models
 
-local_models_directory="$cloud/Lego/models"
-server_models_directory="$PWD/models"
+local_models_directory="${cloud}"/Lego/models
+server_models_directory="${PWD}"/models
 
-source_uid_file="$cloud/Lego/sketchfab/uid-list"
-destination_uid_file="$root/uid-list"
+source_uid_file="${cloud}"/Lego/sketchfab/uid-list
+destination_uid_file="${root}"/uid-list
 
-# models --------------------------------------------------------------------- #
+# models #
 
 # check if directory exists
 
-if [ -d "$server_models_directory" ]
+if [ -d "${server_models_directory}" ]
 then
-	cd "$server_models_directory" || exit
+	cd "${server_models_directory}" || exit
 
 	rm -rf !(*.html|*.sh)
 else
-	mkdir -p "$server_models_directory"
+	mkdir -p "${server_models_directory}"
 fi
 
 # synchronize content
 
-rsync -aqr \
-	--exclude='*.ldr' \
-	--exclude='*.mpd' \
-		$local_models_directory/* $server_models_directory
+rsync					\
+	-aqr				\
+	--exclude='*.ldr'	\
+	--exclude='*.mpd'	\
+						"${local_models_directory}"/* "${server_models_directory}"
 
-# indexes -------------------------------------------------------------------- #
+# indexes #
 
-cd "$server_models_directory" || exit
+cd "${server_models_directory}" || exit
 
-for directory in $(find $server_models_directory -maxdepth 0 -type d)
+for directory in $(find "${server_models_directory}" -maxdepth 0 -type d)
 do
-	echo "$directory"
+	echo "${directory}"
 
-	cd "$directory" || exit
+	cd "${directory}" || exit
 
 	# create model title file
 
-	title="$(basename $directory)"
+	title="$(basename ${directory})"
 	echo "${title^^}" | sed 's/-/ /g' > title
 
-	for subdirectory in $(find $server_models_directory/* -maxdepth 1 -type d)
+	for subdirectory in $(find ${server_models_directory}/* -maxdepth 1 -type d)
 	do
-		echo "$subdirectory"
+		echo "${subdirectory}"
 
-		cd "$subdirectory" || exit
+		cd "${subdirectory}" || exit
 
 		# create model title file
 
-		title="$(basename $subdirectory)"
+		title="$(basename ${subdirectory})"
 		echo "${title^^}" | sed 's/-/ /g' > title
 	done
 
 	# exit to top level
 
-	cd "$server_models_directory" || exit
+	cd "${server_models_directory}" || exit
 done
 
-# background ----------------------------------------------------------------- #
+# background #
 
 # check if directory exists
 
@@ -90,9 +91,9 @@ do
 
     count=0
 
-    for background in $(echo $(find $local_models_directory -type f -iname flat.$extension))
+    for background in $(echo $(find ${local_models_directory} -type f -iname flat."${extension}"))
     do
-        rsync -aqr "$background" "../background/background-${count}.png"
+        rsync -aqr "${background}" "../background/background-${count}.png"
 
         ((count++))
     done
@@ -103,9 +104,9 @@ do
 
 	for background in ../background/*.png
 	do
-		pad_count=$(printf "%03d.png" "$count")
+		pad_count=$(printf "%03d.png" "${count}")
 
-		mv -i -- "$background" ../background/background-"$pad_count"
+		mv -i -- "${background}" ../background/background-"$pad_count"
 
 		let count=count+1
 	done
@@ -116,7 +117,7 @@ do
 		// set random background //
 
 		\$(document).ready(function() {
-		var count = $count;
+		var count = ${count};
 
 		function pad(str, max) {
 			str = str.toString();

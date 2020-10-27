@@ -17,7 +17,7 @@ fi
 
 # generate models menu
 
-# BEGIN MODELS MENU----------------------------------------------------------- #
+# BEGIN MODELS MENU #
 
 # generate header
 
@@ -41,11 +41,11 @@ do
 
 	# shuffle directory list to showcase all models
 
-	for models_directory in $(find models/ -type f -iname flat.$extension | shuf)
+	for models_directory in $(find models/ -type f -iname flat."${extension}" | shuf)
 	do
 		IFS='/' read -r -a path <<< $(echo "$models_directory")
 
-		# /models/model-type/model/renders/flat/flat.$extension
+		# /models/model-type/model/renders/flat/flat.${extension}
 
 		# echo "${path[0]}" # /models
 		# echo "${path[1]}" # /model-type
@@ -67,7 +67,7 @@ do
 
 		# generate model type directory title header
 
-		if [ $count -eq 1 ]
+		if [ "${count}" -eq 1 ]
 		then
 			hidden=""
 		else
@@ -99,7 +99,7 @@ cat << MODEL >> "models/models-menu.html"
 
 MODEL
 
-# BEGIN MODEL INDEX ---------------------------------------------------------- #
+# BEGIN MODEL INDEX #
 
 # generate model index
 
@@ -348,32 +348,32 @@ cat > "models/${path[1]}/${path[2]}/index.html" << INDEX
 				<!-- quarter front view -->
 
 				<div class='grid-cell'>
-					<a href='./${path[3]}/${path[2]}-quarter-front.$extension' target='_blank'>
-						<img src='./${path[3]}/${path[2]}-quarter-front.$extension'/>
+					<a href='./${path[3]}/${path[2]}-quarter-front.${extension}' target='_blank'>
+						<img src='./${path[3]}/${path[2]}-quarter-front.${extension}'/>
 					</a>
 				</div>
 
 				<!-- front view -->
 
 				<div class='grid-cell'>
-					<a href='./${path[3]}/${path[2]}-front.$extension' target='_blank'>
-						<img src='./${path[3]}/${path[2]}-front.$extension'/>
+					<a href='./${path[3]}/${path[2]}-front.${extension}' target='_blank'>
+						<img src='./${path[3]}/${path[2]}-front.${extension}'/>
 					</a>
 				</div>
 
 				<!-- quarter back view -->
 
 				<div class='grid-cell'>
-					<a href='./${path[3]}/${path[2]}-quarter-back.$extension' target='_blank'>
-						<img src='./${path[3]}/${path[2]}-quarter-back.$extension'/>
+					<a href='./${path[3]}/${path[2]}-quarter-back.${extension}' target='_blank'>
+						<img src='./${path[3]}/${path[2]}-quarter-back.${extension}'/>
 					</a>
 				</div>
 
 				<!-- back view -->
 
 				<div class='grid-cell'>
-					<a href='./${path[3]}/${path[2]}-back.$extension' target='_blank'>
-						<img src='./${path[3]}/${path[2]}-back.$extension'/>
+					<a href='./${path[3]}/${path[2]}-back.${extension}' target='_blank'>
+						<img src='./${path[3]}/${path[2]}-back.${extension}'/>
 					</a>
 				</div>
 
@@ -391,7 +391,7 @@ cat > "models/${path[1]}/${path[2]}/index.html" << INDEX
 </html>
 INDEX
 
-# END MODEL INDEX ------------------------------------------------------------ #
+# END MODEL INDEX #
 
 		((count++))
 
@@ -411,4 +411,4 @@ cat << FILE >> "models/models-menu.html"
 
 FILE
 
-# END MODEL MENU ------------------------------------------------------------- #
+# END MODEL MENU #
