@@ -5,9 +5,8 @@
 # variables #
 
 scripts_list=(
-	models-sync
-	models-pages
-)
+	legolinux-models
+y)
 
 # run scripts
 
