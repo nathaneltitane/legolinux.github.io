@@ -6,7 +6,7 @@ shopt -s extglob
 
 # variables #
 
-cloud="/media/Internal/MEGA"
+cloud="/media/Internal/Drive"
 root="${PWD}"/models
 
 local_models_directory="${cloud}"/Lego/models
