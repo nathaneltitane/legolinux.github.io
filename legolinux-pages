@@ -21,7 +21,7 @@ fi
 
 # generate header
 
-cat << 'FILE' > "models/models-menu.html"
+cat << 'FILE' -> "models/models-menu.html"
 
 
 		<script>
@@ -74,7 +74,7 @@ do
 			hidden="hidden"
 		fi
 
-cat << MODEL-TYPE >> "models/models-menu.html"
+cat << MODEL-TYPE ->> "models/models-menu.html"
             <div class='container $hidden' id=${model_string^^}>
 
 				<div class='grid grid-gutters grid-full large-grid-fit'>
@@ -89,7 +89,7 @@ MODEL-TYPE
 
 # generate model entry
 
-cat << MODEL >> "models/models-menu.html"
+cat << MODEL ->> "models/models-menu.html"
 				<div class='grid-cell'>
 					<a class='load-model' href="models/${path[1]}/${path[2]}" target='_blank'>
 						<img src="/${path[0]}/${path[1]}/${path[2]}/${path[3]}/${path[4]}/${path[5]}" />
@@ -103,7 +103,7 @@ MODEL
 
 # generate model index
 
-cat > "models/${path[1]}/${path[2]}/index.html" << INDEX
+cat << INDEX -> "models/${path[1]}/${path[2]}/index.html"
 <!DOCTYPE html>
 
 <html>
@@ -400,7 +400,7 @@ done
 
 # generate footer
 
-cat << FILE >> "models/models-menu.html"
+cat << FILE ->> "models/models-menu.html"
         </section>
 
 		<section id="anchors">
