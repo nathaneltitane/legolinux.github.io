@@ -111,24 +111,30 @@ do
 		let count=count+1
 	done
 
-    # update random background generator with new file count
+# BEGIN JAVASCRIPT
+
+# update random background generator with new file count
+
+# keep formatting as is - prevents javascript/jquery execution errors
 
 cat << FILE > ../javascript/set-random-background.js
-	// set random background //
+// set random background //
 
-	\$(document).ready(function() {
-	var count = ${count};
+\$(document).ready(function() {
+var count = ${count};
 
-	function pad(str, max) {
-		str = str.toString();
-		return str.length < max ? pad("0" + str, max) : str;
-	}
+function pad(str, max) {
+	str = str.toString();
+	return str.length < max ? pad("0" + str, max) : str;
+}
 
-	\$('.background').css(
-		'background-image',
-		'url("/background/background-' + pad(Math.floor(Math.random() * count), 3) + '.png ")'
-	);
-	});
+\$('.background').css(
+	'background-image',
+	'url("/background/background-' + pad(Math.floor(Math.random() * count), 3) + '.png ")'
+);
+});
 FILE
+
+# END JAVASCRIPT
 
 done
